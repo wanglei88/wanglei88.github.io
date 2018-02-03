@@ -17,12 +17,12 @@ before_install:
 - git config --global user.name "wanglei88"
 - git config --global user.email "18500688585@126.com"
 # 由于使用了yarn，所以需要下载，如不用yarn这两行可以删除
-#- curl -o- -L https://yarnpkg.com/install.sh | bash
-#- export PATH=$HOME/.yarn/bin:$PATH
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- export PATH=$HOME/.yarn/bin:$PATH
 - npm install -g hexo-cli
 install:
 # 不用yarn的话这里改成 npm i 即可
-- npm i
+- yarn
 script:
 - hexo clean
 - hexo generate
